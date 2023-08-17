@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const UserModel = require("../models/Userss");
+const UserModel = require("../models/Users");
 const bcrypt = require("bcrypt")
 
 const registration = async (req, res) => {
