@@ -24,6 +24,13 @@ const login = async (req, res) => {
         data: {
           _id: user._id,
           fullName: user.fullName,
+          age: user.age,
+          gender: user.gender,
+          parentFullName: user.parentFullName,
+          email: user.email,
+          password: user.password,
+          username: user.username,
+          phoneNumber: user.phoneNumber,
           createdDate: user.createdDate,
           token
         },
