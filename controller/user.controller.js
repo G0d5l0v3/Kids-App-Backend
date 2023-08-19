@@ -2,7 +2,7 @@ const Joi = require("joi");
 const UserModel = require("../models/users");
 const bcrypt = require("bcrypt")
 
-const registration = async (req, res) => {
+const signup = async (req, res) => {
   const schema = Joi.object({
     fullName: Joi.string().min(3).required(),
     age: Joi.number().required(),
@@ -79,4 +79,4 @@ const registration = async (req, res) => {
     });
   }
 };
-module.exports = registration;
+module.exports = signup;

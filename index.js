@@ -4,6 +4,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const userRouter = require("./routes/user");
 
+
+
+
 const app = express();
 
 // allow cross origin requests from any domain, for testing purposes only!
@@ -12,6 +15,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 // routes
 app.use("/api/v1/auth/", userRouter)
+
+
 // load env variables
 dotenv.config();
 // environment variables
