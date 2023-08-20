@@ -12,6 +12,7 @@ const signup = async (req, res) => {
     username: Joi.string().required(),
     phoneNumber: Joi.number().required(),
     password: Joi.string().min(8).required(),
+    cpassword: Joi.string().min(8).required()
   });
   const { error } = schema.validate(req.body);
   if (error) {
