@@ -12,7 +12,7 @@ const signup = async (req, res) => {
     username: Joi.string().required(),
     phoneNumber: Joi.number().required(),
     password: Joi.string().min(8).required(),
-    cpassword: Joi.string().min(8).required()
+    cpassword: Joi.string().valid(Joi.ref("password")).required()
   });
   const { error } = schema.validate(req.body);
   if (error) {
@@ -29,6 +29,7 @@ const signup = async (req, res) => {
     parentFullName,
     email,
     password,
+    cpassword,
     username,
     phoneNumber,
   } = req.body;
