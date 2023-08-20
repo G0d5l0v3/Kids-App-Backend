@@ -58,6 +58,7 @@ const signup = async (req, res) => {
       createdDate: new Date().toJSON(),
     });
     user.password = await bcrypt.hash(user.password, salt)
+    user.cpassword = await bcrypt.hash(user.cpassword, salt)
     await user.save();
     res.status(200).send({
       responseCode: "00",
