@@ -50,6 +50,7 @@ const signup = async (req, res) => {
       parentFullName,
       email,
       password,
+      cpassword,
       username,
       phoneNumber,
       createdDate: new Date().toJSON(),

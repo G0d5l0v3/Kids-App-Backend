@@ -20,7 +20,7 @@ app.use("/api/v1/auth/", userRouter)
 // load env variables
 dotenv.config();
 // environment variables
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 const connection_string = process.env.CONNECTION_STRING;
 
 app.listen(port, () => {

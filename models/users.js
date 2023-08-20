@@ -35,6 +35,10 @@ const userschema = new mongoose.Schema({
         type : String,
         required: "Password is required"
     },
+    cpassword: {
+        type: String,
+        required: "Confirm password is required"
+    },
     createdDate: {
         type: Date,
         default: new Date().toJSON()
